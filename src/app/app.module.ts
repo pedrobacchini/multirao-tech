@@ -7,6 +7,8 @@ import { CandidatureComponent } from './candidature/candidature.component';
 import { RegisterProfileComponent } from './register-profile/register-profile.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { OngComponent } from './ong/ong.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/vonluntario-candidaturas.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { OngComponent } from './ong/ong.component';
     CandidatureComponent,
     RegisterProfileComponent,
     ServiceDetailsComponent,
-    OngComponent
+    OngComponent,
+    NavBarComponent,
+    VonluntarioCandidaturasComponent
   ],
   imports: [
     BrowserModule
