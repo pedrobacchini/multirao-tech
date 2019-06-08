@@ -11,7 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 // import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/vonluntario-candidaturas.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import { VoluntaryMenuComponent } from './voluntary-menu/voluntary-menu.component';
+// import { VoluntaryMenuComponent } from './voluntary-menu/voluntary-menu.component';
 import { VoluntaryRegisterComponent } from './voluntary-register/voluntary-register.component';
 
 @NgModule({
@@ -25,7 +25,7 @@ import { VoluntaryRegisterComponent } from './voluntary-register/voluntary-regis
     NavBarComponent,
     // VonluntarioCandidaturasComponent,
     PageNotFoundComponent,
-    VoluntaryMenuComponent,
+    // VoluntaryMenuComponent,
     VoluntaryRegisterComponent
   ],
   imports: [

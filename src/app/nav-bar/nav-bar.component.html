@@ -1,40 +1,72 @@
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <div class="col-md-12">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">A GENTE</a>
-
-    <!-- Toggler/collapsibe Button -->
-<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">-->
-<!--      <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
-
-    <!-- Navbar links -->
-    <div class="float-right">
-      <a href="#" class="" data-toggle="modal" data-target="#exampleModal">
-        <img src="../../assets/images/user-male.png" alt="" style="width: 60px;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">A GENTE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link" routerLink="">Home</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="candidature">Candidaturas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+    </ul>
+  </div>
+  <div class="float-right">
+    <div class="dropdown">
+      <a href="#" class="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 100px;">
+        <label *ngIf="logado" style="margin-right: 15px;">Paulo Guedes</label>
+        <img *ngIf="!logado" src="../../assets/images/user-male.png" alt="" style="width: 60px;">
+        <img *ngIf="logado" src="../../assets/images/user-real-male.png" alt="" style="width: 60px;
+border-radius: 100px">
       </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
+        <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+  <div id="exampleModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
+        <div class="modal-body">
+          <!--            <form action="/examples/actions/confirmation.php" method="post">-->
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="username" placeholder="Email" required="required"
+                       value="voluntario@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Senha" required="required"
+                       value="senha">
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-lg" data-dismiss="modal" (click)="logar()">
+                Entrar
+              </button>
+            </div>
+            <p class="hint-text"><a href="">Esqueceu a senha?</a></p>
+          </form>
+        </div>
+        <div class="modal-footer">Não tem cadastro?<a data-dismiss="modal"
+                                                      routerLink="/register-profile">Crie um</a></div>
       </div>
     </div>
   </div>
 </nav>
-<br>
+
