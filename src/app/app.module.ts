@@ -7,8 +7,8 @@ import { CandidatureComponent } from './candidature/candidature.component';
 import { RegisterProfileComponent } from './register-profile/register-profile.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { OngComponent } from './ong/ong.component';
-import { AppRoutingModule } from './app-routing.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/vonluntario-candidaturas.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +18,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RegisterProfileComponent,
     ServiceDetailsComponent,
     OngComponent,
-    PageNotFoundComponent
+    NavBarComponent,
+    VonluntarioCandidaturasComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
