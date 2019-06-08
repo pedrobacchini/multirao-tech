@@ -7,6 +7,8 @@ import { CandidatureComponent } from './candidature/candidature.component';
 import { RegisterProfileComponent } from './register-profile/register-profile.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { OngComponent } from './ong/ong.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { OngComponent } from './ong/ong.component';
     CandidatureComponent,
     RegisterProfileComponent,
     ServiceDetailsComponent,
-    OngComponent
+    OngComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
