@@ -9,6 +9,8 @@ import { ServiceDetailsComponent } from './service-details/service-details.compo
 import { OngComponent } from './ong/ong.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/vonluntario-candidaturas.component';
+import {AppRoutingModule} from './app-routing.module';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,13 @@ import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/von
     ServiceDetailsComponent,
     OngComponent,
     NavBarComponent,
-    VonluntarioCandidaturasComponent
+    VonluntarioCandidaturasComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
