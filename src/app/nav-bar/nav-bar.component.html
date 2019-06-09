@@ -14,7 +14,7 @@
 <!--        <a class="nav-link" routerLink="/home">Home</a>-->
 <!--      </li>-->
       <li *ngIf="applicationStatusService.logado">
-        <a class="nav-link" routerLink="/candidature">Candidaturas</a>
+        <a class="nav-link" routerLink="/candidature">Minhas Inscrições</a>
       </li>
       <li class="nav-item" *ngIf="applicationStatusService.logado">
         <a class="nav-link" routerLink="/voluntary-dashboard">Dashboard</a>
@@ -30,14 +30,14 @@
 <!--    </a>-->
   </div>
   <div class="col-xs-6">
-    <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
+    <div class="dropdown float-right" *ngIf="!applicationStatusService.logado && !applicationStatusService.logadoOng">
       <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
         <a class="dropdown-item" routerLink="/register-ong">Cadastro</a>
       </div>
     </div>
-    <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
+    <div class="dropdown float-right" *ngIf="!applicationStatusService.logado && !applicationStatusService.logadoOng">
       <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
@@ -59,6 +59,15 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a routerLink="" class="dropdown-item" (click)="applicationStatusService.logout()">Sair</a>
+      </div>
+    </div>
+    <div class="dropdown float-right" *ngIf="applicationStatusService.logadoOng">
+      <label style="margin-right: 15px;color: #f3f3f3">ONG Paulo</label>
+      <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="../../assets/images/user-real-male.png" alt="" style="width: 40px;border-radius: 100px">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a routerLink="" class="dropdown-item" (click)="applicationStatusService.logoutOng()">Sair</a>
       </div>
     </div>
   </div>
@@ -88,7 +97,8 @@
               </div>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-block btn-lg" data-dismiss="modal" routerLink="/ong">
+                <button type="submit" class="btn btn-primary btn-block btn-lg" data-dismiss="modal"
+                        routerLink="/ong" (click)="logarOng()">
                 Entrar
               </button>
             </div>
