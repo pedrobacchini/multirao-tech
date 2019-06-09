@@ -7,6 +7,14 @@ export class ApplicationStatusService {
 
   logado = false;
 
+  registrando = false;
+
+  registrar(){
+    this.registrando = true;
+    console.log("clICOU");
+  }
+
+
   constructor() { }
 
   login() {

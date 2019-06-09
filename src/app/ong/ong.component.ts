@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApplicationStatusService } from '../application-status.service';
 
 @Component({
   selector: 'app-ong',
@@ -12,4 +13,5 @@ export class OngComponent implements OnInit {
   ngOnInit() {
   }
 
+  
 }

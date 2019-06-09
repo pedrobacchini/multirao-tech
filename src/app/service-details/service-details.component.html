@@ -42,10 +42,12 @@
 
   <br>
   <br>
-  <h2>Voluntários Cadastrados</h2>
+ 
   <br>
 
-    <div class="row">
+    <div class="row" [hidden]="status.registrando">
+        <h2>Voluntários Cadastrados</h2>
+        <br>
       <div class="col-md-12">
         <table class="table table-bordered">
           <thead style="background-color: #363636; color: white;">
