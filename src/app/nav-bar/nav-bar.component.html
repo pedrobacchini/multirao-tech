@@ -32,14 +32,14 @@
   <div class="col-xs-6">
     <div class="dropdown float-right" *ngIf="!applicationStatusService.logado && !applicationStatusService.logadoOng">
       <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="margin-left: -80px;">
         <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
         <a class="dropdown-item" routerLink="/register-ong">Cadastro</a>
       </div>
     </div>
     <div class="dropdown float-right" *ngIf="!applicationStatusService.logado && !applicationStatusService.logadoOng">
       <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu " aria-labelledby="dropdownMenuButton" >
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
         <a class="dropdown-item" routerLink="/register-voluntary">Cadastro</a>
       </div>
