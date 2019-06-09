@@ -1,19 +1,20 @@
 <app-nav-bar></app-nav-bar>
-<br>
-<h2>Dados do Serviço</h2>
-<form id="formulario">
+<div class="container">
+  <br>
+  <h2>Dados do Serviço</h2>
+  <form id="formulario">
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputEmail4">Nome</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="Nome">
       </div>
       <div class="form-group col-md-4">
-        <label for="inputPassword4">Tipo de Serviço</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Tipo de Serviço">
+        <label for="inputTipo">Tipo de Serviço</label>
+        <input type="password" class="form-control" id="inputTipo" placeholder="Tipo de Serviço">
       </div>
       <div class="form-group col-md-4">
-        <label for="inputPassword4">Descrição</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Descrição">
+        <label for="inputDescricao">Descrição</label>
+        <input type="password" class="form-control" id="inputDescricao" placeholder="Descrição">
       </div>
     </div>
     <div class="form-group">
@@ -42,59 +43,60 @@
 
   <br>
   <br>
- 
+
   <br>
 
-    <div class="row" [hidden]="status.registrando">
-        <h2>Voluntários Cadastrados</h2>
-        <br>
-      <div class="col-md-12">
-        <table class="table table-bordered">
-          <thead style="background-color: #363636; color: white;">
-            <th>Profissão</th>
-            <th>Nome do Voluntário</th>
-            <th>Perfil Ideal?</th>
-            <th>Horas de Experiência</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Faxineiro</td>
-              <td>Luiz Fernando Andrade</td>
-              <td>Sim</td>
-              <td>2 Hrs</td>
-            </tr>
-            <tr>
-              <td>Médico</td>
-              <td>Alberto dos Santos</td>
-              <td>Não</td>
-              <td>12 Hrs</td>
-            </tr>
-            <tr>
-              <td>Professor</td>
-              <td>Celso Silva</td>
-              <td>Não</td>
-              <td>20 Hrs</td>
-            </tr>
-            <tr>
-              <td>Desenvolvedora</td>
-              <td>Ana Cecília Kevir</td>
-              <td>Sim</td>
-              <td>35 Hrs</td>
-            </tr>
-            <tr>
-              <td>Advogada</td>
-              <td>Maria Ana</td>
-              <td>Sim</td>
-              <td>1 Hrs</td>
-            </tr>
-            <tr>
-              <td>---</td>
-              <td>Roberto Silveira</td>
-              <td>Sim</td>
-              <td>0 Hrs</td>
-            </tr>
-            <tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="row" [hidden]="status.registrando">
+    <h2>Voluntários Cadastrados</h2>
+    <br>
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead style="background-color: #363636; color: white;">
+        <th>Profissão</th>
+        <th>Nome do Voluntário</th>
+        <th>Perfil Ideal?</th>
+        <th>Horas de Experiência</th>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Faxineiro</td>
+          <td>Luiz Fernando Andrade</td>
+          <td>Sim</td>
+          <td>2 Hrs</td>
+        </tr>
+        <tr>
+          <td>Médico</td>
+          <td>Alberto dos Santos</td>
+          <td>Não</td>
+          <td>12 Hrs</td>
+        </tr>
+        <tr>
+          <td>Professor</td>
+          <td>Celso Silva</td>
+          <td>Não</td>
+          <td>20 Hrs</td>
+        </tr>
+        <tr>
+          <td>Desenvolvedora</td>
+          <td>Ana Cecília Kevir</td>
+          <td>Sim</td>
+          <td>35 Hrs</td>
+        </tr>
+        <tr>
+          <td>Advogada</td>
+          <td>Maria Ana</td>
+          <td>Sim</td>
+          <td>1 Hrs</td>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>Roberto Silveira</td>
+          <td>Sim</td>
+          <td>0 Hrs</td>
+        </tr>
+        <tr>
+        </tbody>
+      </table>
     </div>
+  </div>
+</div>
