@@ -7,8 +7,10 @@
     <div class="row">
       <div class="col-md-3" style="padding: 3px;" *ngFor="let vaga of suasVagas">
         <div class="vaga">
-          <img src="https://loremflickr.com/500/500/paris?lock={{vaga.id}}" style="width: 100%; height: 100%; border-radius: 19px;">
-        </div>
+          <a data-toggle="modal" data-target="#modalExemplo1">
+            <img src="https://loremflickr.com/500/500/paris?lock={{vaga.id}}" style="width: 100%; height: 100%; border-radius: 19px;">
+          </a>
+          </div>
       </div>
     </div>
   </div>
@@ -16,12 +18,79 @@
   <h2><label *ngIf="applicationStatusService.logado">Outras</label> Oportunidades</h2>
   <hr>
   <div class="row">
+    <div class="col-md-3" style="padding: 3px;" *ngFor="let vaga of vagasFixa">
+      <div class="vaga">
+        <a data-toggle="modal" data-target="#modalExemplo0">
+          <img src="https://loremflickr.com/500/500/paris?lock={{vaga.id}}" style="width: 100%; height: 100%; border-radius: 19px;">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-3" style="padding: 3px;" *ngFor="let vaga of vagas">
       <div class="vaga">
-        <img src="https://loremflickr.com/500/500/paris?lock={{vaga.id}}" style="width: 100%; height: 100%; border-radius: 19px;">
+        <a data-toggle="modal" data-target="#modalExemplo1">
+          <img src="https://loremflickr.com/500/500/paris?lock={{vaga.id}}" style="width: 100%; height: 100%; border-radius: 19px;">
+        </a>
       </div>
     </div>
   </div>
   <br>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Garçom</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>Você tem experiência com atendimento?</h2>
+
+        <p>
+          Estamos a procura de uma pessoa que esteja disposta a disponibilizar um pouco do seu tempo para tornar o sonho de um(a) jovem em realidade. Que seja uma pessoa alegre e que isso não interfira suas responsabilidades diárias.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button *ngIf="applicationStatusService.logado" type="button" class="btn btn-primary" data-dismiss="modal"
+                routerLink="/candidature">
+          Aplicar para esse voluntariado</button>
+        <label *ngIf="!applicationStatusService.logado">Faça o login para se voluntariar</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelCuzinheiro">Design</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>Sabe fazer cartões de visita?</h2>
+        <p>
+          Queremos uma pessoa que esteja disposta a fazer convites personalizados, para tornar o momento ainda mais especial. Se você é criativo e tem disponibilidade, venha nos ajudar a realizar mais um sonho.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button *ngIf="applicationStatusService.logado" type="button" class="btn btn-primary"
+                routerLink="/candidature" data-dismiss="modal">
+          Aplicar para esse voluntariado
+        </button>
+        <label *ngIf="!applicationStatusService.logado">Faça o login para se voluntariar</label>
+      </div>
+    </div>
+  </div>
 </div>
 
