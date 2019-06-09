@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
+  logado = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  logar() {
+    this.logado = true;
+  }
 }

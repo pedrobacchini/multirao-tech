@@ -1,22 +1,12 @@
+<!--<app-voluntary-menu></app-voluntary-menu>-->
 <app-nav-bar></app-nav-bar>
 <div class="container">
   <h2>Baseadas em você</h2>
   <hr>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3" *ngFor="let vaga of vagas">
       <div class="vaga">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="vaga">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="vaga">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="vaga">
+        <img src="https://loremflickr.com/500/500/brazil,rio?random={{vaga.id}}" style="width: 100%; height: 100%; border-radius: 19px;">
       </div>
     </div>
   </div>

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  vagas = [];
+
   constructor() { }
 
   ngOnInit() {
+    for (let i = 0; i < Math.random() * 10; i++) {
+      this.vagas.push({
+        id: i
+      });
+    }
   }
-
 }

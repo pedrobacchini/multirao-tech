@@ -8,9 +8,12 @@ import { RegisterProfileComponent } from './register-profile/register-profile.co
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { OngComponent } from './ong/ong.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/vonluntario-candidaturas.component';
+// import { VonluntarioCandidaturasComponent } from './vonluntario-candidaturas/vonluntario-candidaturas.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+// import { VoluntaryMenuComponent } from './voluntary-menu/voluntary-menu.component';
+import { VoluntaryRegisterComponent } from './voluntary-register/voluntary-register.component';
+import { VoluntaryDashboardComponent } from './voluntary-dashboard/voluntary-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +24,11 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     ServiceDetailsComponent,
     OngComponent,
     NavBarComponent,
-    VonluntarioCandidaturasComponent,
-    PageNotFoundComponent
+    // VonluntarioCandidaturasComponent,
+    PageNotFoundComponent,
+    // VoluntaryMenuComponent,
+    VoluntaryRegisterComponent,
+    VoluntaryDashboardComponent
   ],
   imports: [
     BrowserModule,
