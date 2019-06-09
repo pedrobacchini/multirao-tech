@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CandidatureComponent implements OnInit {
 
+  candidaturas = [];
+
   constructor() { }
 
   ngOnInit() {
+    for (let i = 0; i < Math.random() * 10; i++) {
+      this.candidaturas.push({
+        id: i
+      });
+    }
   }
 
 }
