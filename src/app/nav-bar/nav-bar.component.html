@@ -1,54 +1,64 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="col-md-1"></div>
   <a routerLink="/home">
-    <label class="navbar-brand">A GENTE</label>
+<!--    <label class="navbar-brand">A GENTE</label>-->
+    <img src="../../assets/images/logo.jpeg" style="border-radius: 100px;">
   </a>
-  <img src="../../assets/images/logo.jpeg">
+<!--  <img src="../../assets/images/logo.jpeg" style="border-radius: 100px;">-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav" *ngIf="applicationStatusService.logado">
+  <div class="collapse navbar-collapse" id="navbarNav" >
     <ul class="navbar-nav">
 <!--      <li>-->
 <!--        <a class="nav-link" routerLink="/home">Home</a>-->
 <!--      </li>-->
-      <li>
+      <li *ngIf="applicationStatusService.logado">
         <a class="nav-link" routerLink="/candidature">Candidaturas</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="applicationStatusService.logado">
         <a class="nav-link" routerLink="/voluntary-dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/how-work" >Como Funciona</a>
       </li>
     </ul>
   </div>
   <div>
-    <a routerLink="/how-work">
-      Como Funciona
-    </a>
+<!--    <a routerLink="/how-work" class="btn">-->
+<!--      Como Funciona-->
+<!--    </a>-->
   </div>
-  <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
-    <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
-      <a class="dropdown-item" routerLink="/register-ong">Cadastro</a>
+  <div class="col-xs-6">
+    <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
+      <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
+        <a class="dropdown-item" routerLink="/register-ong">Cadastro</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
-    <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
-      <a class="dropdown-item" routerLink="/register-voluntary">Cadastro</a>
+    <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
+      <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
+        <a class="dropdown-item" routerLink="/register-voluntary">Cadastro</a>
+      </div>
     </div>
   </div>
 
   <div class="float-right">
 <!--    <img *ngIf="applicationStatusService.logado" src="../../assets/images/user-real-male.png" alt=""-->
 <!--         style="width: 40px;border-radius: 100px">-->
+<!--    <a routerLink="/how-work" class="btn">-->
+<!--      Como Funciona-->
+<!--    </a>-->
     <div class="dropdown float-right" *ngIf="applicationStatusService.logado">
       <label style="margin-right: 15px;color: #f3f3f3">Paulo</label>
       <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src="../../assets/images/user-real-male.png" alt="" style="width: 40px;border-radius: 100px">
       </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" (click)="applicationStatusService.logout()">Sair</a>
+        <a routerLink="" class="dropdown-item" (click)="applicationStatusService.logout()">Sair</a>
       </div>
     </div>
   </div>

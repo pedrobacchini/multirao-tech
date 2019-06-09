@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApplicationStatusService} from '../application-status.service';
 
 @Component({
   selector: 'app-register-voluntary',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterVoluntaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private applicationStatusService: ApplicationStatusService) { }
 
   ngOnInit() {
   }
