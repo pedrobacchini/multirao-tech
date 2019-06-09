@@ -1,14 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <label class="navbar-brand">A GENTE</label>
+  <a routerLink="/home">
+    <label class="navbar-brand">A GENTE</label>
+  </a>
   <img src="../../assets/images/logo.jpeg">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav" *ngIf="applicationStatusService.logado">
     <ul class="navbar-nav">
-      <li>
-        <a class="nav-link" routerLink="/home">Home</a>
-      </li>
+<!--      <li>-->
+<!--        <a class="nav-link" routerLink="/home">Home</a>-->
+<!--      </li>-->
       <li>
         <a class="nav-link" routerLink="/candidature">Candidaturas</a>
       </li>
@@ -16,6 +18,11 @@
         <a class="nav-link" routerLink="/voluntary-dashboard">Dashboard</a>
       </li>
     </ul>
+  </div>
+  <div>
+    <a routerLink="/how-work">
+      Como Funciona
+    </a>
   </div>
   <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
     <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
@@ -33,9 +40,17 @@
   </div>
 
   <div class="float-right">
-    <label *ngIf="applicationStatusService.logado" style="margin-right: 15px;color: #f3f3f3">Paulo Guedes</label>
-    <img *ngIf="applicationStatusService.logado" src="../../assets/images/user-real-male.png" alt="" style="width: 40px;
-border-radius: 100px">
+<!--    <img *ngIf="applicationStatusService.logado" src="../../assets/images/user-real-male.png" alt=""-->
+<!--         style="width: 40px;border-radius: 100px">-->
+    <div class="dropdown float-right" *ngIf="applicationStatusService.logado">
+      <label style="margin-right: 15px;color: #f3f3f3">Paulo</label>
+      <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="../../assets/images/user-real-male.png" alt="" style="width: 40px;border-radius: 100px">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="applicationStatusService.logout()">Sair</a>
+      </div>
+    </div>
   </div>
 
 <!--  Modal ONG-->
@@ -43,7 +58,7 @@ border-radius: 100px">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Login</h4>
+          <h4 class="modal-title">ONG</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
@@ -81,7 +96,7 @@ border-radius: 100px">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Login</h4>
+          <h4 class="modal-title">Voluntário</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">

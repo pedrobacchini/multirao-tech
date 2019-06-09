@@ -12,4 +12,8 @@ export class ApplicationStatusService {
   login() {
     this.logado = true;
   }
+
+  logout() {
+    this.logado = false;
+  }
 }
