@@ -8,10 +8,8 @@ import { ApplicationStatusService } from '../application-status.service';
 })
 export class OngComponent implements OnInit {
 
-  constructor() { }
+  constructor(private applicationStatusService: ApplicationStatusService) { }
 
   ngOnInit() {
   }
-
-  
 }
