@@ -11,7 +11,7 @@ import {VoluntaryDashboardComponent} from './voluntary-dashboard/voluntary-dashb
 const routesMain: Routes = [
   {path: 'candidature', component: CandidatureComponent},
   {path: 'voluntary-dashboard', component: VoluntaryDashboardComponent},
-  {path: '', component: HomeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'ong', component: OngComponent},
   {path: 'register-profile', component: RegisterProfileComponent},
