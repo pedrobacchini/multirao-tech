@@ -16,4 +16,7 @@ export class NavBarComponent implements OnInit {
   logar() {
     this.applicationStatusService.login();
   }
+  logarOng(){
+    this.applicationStatusService.loginOng();
+  }
 }
