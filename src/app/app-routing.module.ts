@@ -8,6 +8,7 @@ import {ServiceDetailsComponent} from './service-details/service-details.compone
 import {VoluntaryDashboardComponent} from './voluntary-dashboard/voluntary-dashboard.component';
 import {RegisterVoluntaryComponent} from './register-voluntary/register-voluntary.component';
 import {RegisterOngComponent} from './register-ong/register-ong.component';
+import {HowWorkComponent} from './how-work/how-work.component';
 
 const routesMain: Routes = [
   {path: 'candidature', component: CandidatureComponent},
@@ -18,6 +19,8 @@ const routesMain: Routes = [
   {path: 'register-voluntary', component: RegisterVoluntaryComponent},
   {path: 'register-ong', component: RegisterOngComponent},
   {path: 'service-details', component: ServiceDetailsComponent},
+  {path: 'how-work', component: HowWorkComponent},
+
   {path: '**', component: PageNotFoundComponent},
 ];
 

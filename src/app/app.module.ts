@@ -13,6 +13,7 @@ import { VoluntaryRegisterComponent } from './voluntary-register/voluntary-regis
 import { VoluntaryDashboardComponent } from './voluntary-dashboard/voluntary-dashboard.component';
 import { RegisterVoluntaryComponent } from './register-voluntary/register-voluntary.component';
 import { RegisterOngComponent } from './register-ong/register-ong.component';
+import { HowWorkComponent } from './how-work/how-work.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RegisterOngComponent } from './register-ong/register-ong.component';
     VoluntaryRegisterComponent,
     VoluntaryDashboardComponent,
     RegisterVoluntaryComponent,
-    RegisterOngComponent
+    RegisterOngComponent,
+    HowWorkComponent
   ],
   imports: [
     BrowserModule,

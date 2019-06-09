@@ -1,3 +1,49 @@
-<p>
-  register-voluntary works!
-</p>
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <h2>Voluntário</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="nome" class="form-control" id="nome" placeholder="Entre com o nome" name="nome">
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="number" class="form-control" id="telefone" placeholder="Entre com o seu telefone" name="telefone">
+    </div>
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="number" class="form-control" id="cpf" placeholder="Entre com o seu cpf" name="cpf">
+    </div>
+    <div class="form-group">
+      <label for="nascimento">Data Nascimento:</label>
+      <input type="date"  class="form-control" id="nascimento" placeholder="Entre com o sua data de nascimento" name="nascimento">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Sexo</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>Masculino</option>
+        <option>Feminino</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="profissao">Profissão:</label>
+      <input type="" class="form-control" id="profissao" placeholder="Entre com o sua profissao" name="profissao">
+    </div>
+    <div class="form-group">
+      <label for="mini-curriculo">Mini-Curriculo:</label>
+      <textarea class="form-control" id="mini-curriculo" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Entre com o seu email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="senha">Senha:</label>
+      <input type="password" class="form-control" id="senha" placeholder="Entre com a sua senha" name="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Lembre-me</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+</div>
