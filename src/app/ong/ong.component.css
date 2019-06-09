@@ -18,9 +18,12 @@ height: 460px;
 }
 
 #icone{
-    font-size: 5em;
-    color:  #07e2c9;
     position: fixed;
     top: 90px;
     right: 50px;
+}
+
+.butao{
+    position: fixed;
+    padding-bottom: 0px;
 }
