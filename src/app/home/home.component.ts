@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this.vagasFixa.push({id: 3});
     this.vagasFixa.push({id: 4});
 
-    for (let i = 5; i < Math.floor(Math.random() * 10) + 4; i++) {
+    for (let i = 5; i < Math.floor(Math.random() * 10) + 15; i++) {
       this.vagas.push({
         id: i
       });
