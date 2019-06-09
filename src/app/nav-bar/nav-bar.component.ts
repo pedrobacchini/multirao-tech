@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApplicationStatusService} from '../application-status.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  logado = false;
-  constructor() { }
+
+  constructor(private applicationStatusService: ApplicationStatusService) { }
 
   ngOnInit() {
   }
 
   logar() {
-    this.logado = true;
+    this.applicationStatusService.login();
   }
 }

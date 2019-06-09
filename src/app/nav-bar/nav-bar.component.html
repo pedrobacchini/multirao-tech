@@ -3,7 +3,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" id="navbarNav" *ngIf="applicationStatusService.logado">
     <ul class="navbar-nav">
       <li>
         <a class="nav-link" routerLink="">Home</a>
@@ -12,37 +12,30 @@
         <a class="nav-link" routerLink="/candidature">Candidaturas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Dashboard</a>
+        <a class="nav-link" routerLink="/voluntary-dashboard">Dashboard</a>
       </li>
     </ul>
   </div>
-  <div class="dropdown">
+  <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
     <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
       <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
     </div>
   </div>
-  <div class="dropdown">
+  <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
     <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
       <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
     </div>
   </div>
-<!--  <div class="float-right">-->
-    <div class="dropdown">
-      <a href="#" class="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 100px;">
-        <label *ngIf="logado" style="margin-right: 15px;">Paulo Guedes</label>
-        <img *ngIf="logado" src="../../assets/images/user-real-male.png" alt="" style="width: 60px;
+
+  <div class="float-right">
+    <label *ngIf="applicationStatusService.logado" style="margin-right: 15px;color: #f3f3f3">Paulo Guedes</label>
+    <img *ngIf="applicationStatusService.logado" src="../../assets/images/user-real-male.png" alt="" style="width: 40px;
 border-radius: 100px">
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
-        <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
-      </div>
-    </div>
-<!--  </div>-->
+  </div>
 
 <!--  Modal ONG-->
   <div id="exampleModalOng" class="modal fade">
