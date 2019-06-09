@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class ApplicationStatusService {
 
   logado = false;
+  logadoOng = false;
 
   constructor() { }
 
@@ -15,5 +16,13 @@ export class ApplicationStatusService {
 
   logout() {
     this.logado = false;
+  }
+
+  loginOng() {
+    this.logadoOng = true;
+  }
+
+  logoutOng() {
+    this.logadoOng = false;
   }
 }
