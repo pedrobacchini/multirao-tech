@@ -9,18 +9,31 @@
         <a class="nav-link" routerLink="">Home</a>
       </li>
       <li>
-        <a class="nav-link" routerLink="candidature">Candidaturas</a>
+        <a class="nav-link" routerLink="/candidature">Candidaturas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Dashboard</a>
       </li>
     </ul>
   </div>
-  <div class="float-right">
+  <div class="dropdown">
+    <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
+      <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
+      <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
+    </div>
+  </div>
+<!--  <div class="float-right">-->
     <div class="dropdown">
       <a href="#" class="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 100px;">
         <label *ngIf="logado" style="margin-right: 15px;">Paulo Guedes</label>
-        <img *ngIf="!logado" src="../../assets/images/user-male.png" alt="" style="width: 60px;">
         <img *ngIf="logado" src="../../assets/images/user-real-male.png" alt="" style="width: 60px;
 border-radius: 100px">
       </a>
@@ -29,8 +42,47 @@ border-radius: 100px">
         <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
       </div>
     </div>
+<!--  </div>-->
+
+<!--  Modal ONG-->
+  <div id="exampleModalOng" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="username" placeholder="Email" required="required"
+                       value="ongmassa@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Senha" required="required"
+                       value="senha">
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-lg" data-dismiss="modal" (click)="logar()">
+                Entrar
+              </button>
+            </div>
+            <p class="hint-text"><a href="">Esqueceu a senha?</a></p>
+          </form>
+        </div>
+        <div class="modal-footer">Não tem cadastro?<a data-dismiss="modal"
+                                                      routerLink="/register-profile">Crie um</a></div>
+      </div>
+    </div>
   </div>
 
+<!--  Modal VOLUNTARIO-->
   <div id="exampleModal" class="modal fade">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
@@ -39,7 +91,6 @@ border-radius: 100px">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
-          <!--            <form action="/examples/actions/confirmation.php" method="post">-->
           <form>
             <div class="form-group">
               <div class="input-group">

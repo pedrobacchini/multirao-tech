@@ -6,9 +6,11 @@ import {CandidatureComponent} from './candidature/candidature.component';
 import {OngComponent} from './ong/ong.component';
 import {RegisterProfileComponent} from './register-profile/register-profile.component';
 import {ServiceDetailsComponent} from './service-details/service-details.component';
+import {VoluntaryDashboardComponent} from './voluntary-dashboard/voluntary-dashboard.component';
 
 const routesMain: Routes = [
   {path: 'candidature', component: CandidatureComponent},
+  {path: 'voluntary-dashboard', component: VoluntaryDashboardComponent},
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'ong', component: OngComponent},

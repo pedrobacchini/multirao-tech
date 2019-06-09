@@ -13,6 +13,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 // import { VoluntaryMenuComponent } from './voluntary-menu/voluntary-menu.component';
 import { VoluntaryRegisterComponent } from './voluntary-register/voluntary-register.component';
+import { VoluntaryDashboardComponent } from './voluntary-dashboard/voluntary-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { VoluntaryRegisterComponent } from './voluntary-register/voluntary-regis
     // VonluntarioCandidaturasComponent,
     PageNotFoundComponent,
     // VoluntaryMenuComponent,
-    VoluntaryRegisterComponent
+    VoluntaryRegisterComponent,
+    VoluntaryDashboardComponent
   ],
   imports: [
     BrowserModule,
