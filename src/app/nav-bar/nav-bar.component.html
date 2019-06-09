@@ -21,14 +21,14 @@
     <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-warning"> ONG </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalOng">Entrar</a>
-      <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
+      <a class="dropdown-item" routerLink="/register-ong">Cadastro</a>
     </div>
   </div>
   <div class="dropdown float-right" *ngIf="!applicationStatusService.logado">
     <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success">VOLUNTÁRIO</a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Entrar</a>
-      <a class="dropdown-item" routerLink="/register-profile">Cadastro</a>
+      <a class="dropdown-item" routerLink="/register-voluntary">Cadastro</a>
     </div>
   </div>
 
@@ -71,7 +71,7 @@ border-radius: 100px">
           </form>
         </div>
         <div class="modal-footer">Não tem cadastro?<a data-dismiss="modal"
-                                                      routerLink="/register-profile">Crie um</a></div>
+                                                      routerLink="/register-ong">Crie um</a></div>
       </div>
     </div>
   </div>
@@ -101,7 +101,8 @@ border-radius: 100px">
               </div>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-block btn-lg" data-dismiss="modal" (click)="logar()">
+              <button type="submit" class="btn btn-primary btn-block btn-lg" data-dismiss="modal"
+                      routerLink="/home" (click)="logar()">
                 Entrar
               </button>
             </div>
@@ -109,7 +110,7 @@ border-radius: 100px">
           </form>
         </div>
         <div class="modal-footer">Não tem cadastro?<a data-dismiss="modal"
-                                                      routerLink="/register-profile">Crie um</a></div>
+                                                      routerLink="/register-voluntary">Crie um</a></div>
       </div>
     </div>
   </div>

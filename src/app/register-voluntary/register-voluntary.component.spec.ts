@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterProfileComponent } from './register-profile.component';
+import { RegisterVoluntaryComponent } from './register-voluntary.component';
 
-describe('RegisterProfileComponent', () => {
-  let component: RegisterProfileComponent;
-  let fixture: ComponentFixture<RegisterProfileComponent>;
+describe('RegisterVoluntaryComponent', () => {
+  let component: RegisterVoluntaryComponent;
+  let fixture: ComponentFixture<RegisterVoluntaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisterProfileComponent ]
+      declarations: [ RegisterVoluntaryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterProfileComponent);
+    fixture = TestBed.createComponent(RegisterVoluntaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
