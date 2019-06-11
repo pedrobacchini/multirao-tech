@@ -2,7 +2,7 @@
 border-style: solid;
 border-radius: 20px;
 width: 100%;
-background-color: #07e2c9;
+background-color: #e2dcd5;
 height: 460px;
 }
 
@@ -18,9 +18,16 @@ height: 460px;
 }
 
 #icone{
-    font-size: 5em;
-    color:  #07e2c9;
-    position: fixed;
-    top: 90px;
+    font-size: 40px;
+    color: #07e2c9;
+    margin-left: 0px;
+}
+
+.butao{
+    top: 40px;
     right: 50px;
+    position: absolute; 
+    /*width: 150px;*/
+    /*height: 100px;*/
+    /*vertical-align: middle;*/
 }

@@ -1,25 +1,66 @@
 <app-nav-bar></app-nav-bar>
+
 <div class="container">
-  <h2>Gerencia de Demandas Cadastradas</h2>
+  <h2>Gerencia de Ações Cadastradas</h2>
   <div class="row">
     <div class="col-md-4">
       <div class="demanda" id='formContent'>
-
+          <img src="../../assets/images/01.jpg" style="width: 100%;border-radius: 10px;height: 60%;">
+          <br>
+          <div>
+            <h4>Garçom - Festa de 15 anos Giulia</h4>
+              <button class="btn btn-block btn-info">Detalhes do Serviço</button>
+              <button class="btn btn-block btn-danger" data-toggle="modal" data-target="#convocacaoModal">Convocar Voluntários</button>
+            </div>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="demanda" id='formContent'>
-
+          <img src="../../assets/images/02.jpeg" style="width: 100%;border-radius: 10px;height: 60%;">
+          <br>
+          <div>
+              <h4>DJ - Festa de 15 anos Ana Beatriz</h4>
+              <button class="btn btn-block btn-info">Detalhes do Serviço</button>
+              <button class="btn btn-block btn-danger" data-toggle="modal" data-target="#convocacaoModal">Convocar Voluntários</button>
+            </div>
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4" >
       <div class="demanda" id='formContent'>
-
+          <img src="../../assets/images/03.jpg" style="width: 100%;border-radius: 10px;height: 60%;">
+          <br>
+          <div>
+              <h4>Instrutor de Dança - Festa de 15 anos Mônica</h4>
+              <button class="btn btn-block btn-info">Detalhes do Serviço</button>
+              <button class="btn btn-block btn-danger" data-toggle="modal" data-target="#convocacaoModal">Convocar Voluntários</button>
+            </div>
       </div>
     </div>
   
   </div>
-  <i class="material-icons" id="icone">control_point</i>
+
+  
+</div>  
+<div class="row butao">
+
+  <button class="butao btn btn-lg btn-primary" (click)="status.registrar()" routerLink="/service-details" style="display: inherit;">
+        <i class="material-icons " id="icone">control_point</i>
+        Adicionar Ação
+  </button>
+</div>
+
+<div id="convocacaoModal" class="modal fade">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Convocação</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <h2>Os voluntários foram convocados!</h2>
+      </div>
+    </div>
+  </div>
 </div>
